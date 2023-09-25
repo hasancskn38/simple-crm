@@ -1,0 +1,30 @@
+.user-container{
+    display: flex;
+    justify-content: end;
+    min-height: 300px;
+    background-color: rgb(17, 220, 31);
+    color: #fff;
+    padding: 16px;
+}
+
+.user-content {
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50% 50%;
+};
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 16px;
+    
+    h1 {
+    margin: 0 !important;
+    }
+}

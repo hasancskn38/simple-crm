@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.container {
+    height: 100vh;
+}
+
+mat-toolbar {
+    height: 60px;
+}
+
+button {
+    background-color: transparent;
+    border: transparent;
+    color: #fff;
+}
+
+.sidenav {
+    width: 300px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    padding: 0 16px;
+    height: 60px;
+}
+
+.router-container {
+    padding: 16px 56px 0 56px;
+}
+
+ul {
+
+    padding-left: 0;
+    
+
+    li {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        padding:0 16px;
+        height: 48px;
+        cursor: pointer;
+
+        mat-icon {
+            margin-right: 16px;
+        }
+
+        &:hover {
+            background-color: rgba(0, 0, 0, .1);
+        }
+    }
+}

@@ -1,0 +1,67 @@
+
+<lib-toastify-toast-container [transition]="'slide'" [iconLibrary]="'material'"></lib-toastify-toast-container>
+
+<div *ngIf="loading" class="progress-container">
+  <mat-progress-bar  mode="indeterminate"></mat-progress-bar>
+</div>
+
+
+<h1 mat-dialog-title>Add User</h1>
+<div class="popup-container" mat-dialog-content>
+  
+  <div>
+    <mat-form-field class="mr-16" appearance="outline">
+      <mat-label>First Name</mat-label>
+      <input [disabled]="loading" [(ngModel)]="user.firstName" matInput >
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Last Name</mat-label>
+      <input [disabled]="loading" [(ngModel)]="user.lastName" matInput>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field class="full-width"  appearance="outline">
+      <mat-label>Email</mat-label>
+      <input #dateInput [disabled]="loading" [(ngModel)]="user.email" matInput>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+
+  <div>
+    <mat-form-field class="full-width"  appearance="outline">
+      <mat-label>Birth date</mat-label>
+      <input #dateInput [disabled]="loading" [(ngModel)]="birthDate" matInput [matDatepicker]="picker">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Street + House No.</mat-label>
+      <input [disabled]="loading" [(ngModel)]="user.street" matInput >
+      <!-- <mat-hint>Please enter a name</mat-hint> -->
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field class="mr-16" appearance="outline">
+      <mat-label>Zip code</mat-label>
+      <input [disabled]="loading" [(ngModel)]="user.zipCode" matInput >
+    </mat-form-field>
+
+    <mat-form-field class="mr-16" appearance="outline">
+      <mat-label>City</mat-label>
+      <input [disabled]="loading" [(ngModel)]="user.city" matInput >
+    </mat-form-field>
+  </div>
+  
+  
+</div>
+<div class="buttons-container" mat-dialog-actions>
+  <button [disabled]="loading" (click)="cancel()" mat-button>cancel</button>
+  <button [disabled]="loading" (click)="saveUser()" mat-button cdkFocusInitial>Save</button>
+</div>

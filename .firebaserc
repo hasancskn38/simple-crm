@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "simplecrm-hasan": {
+      "hosting": {
+        "crm-app": [
+          "simplecrm-hasan"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "simplecrm-hasan"
+  }
+}

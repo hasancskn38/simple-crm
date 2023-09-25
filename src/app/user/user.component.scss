@@ -1,0 +1,41 @@
+button {
+    position: absolute;
+    bottom: 56px;
+    right: 56px;
+    cursor: pointer;
+}
+
+mat-card {
+    padding: 16px;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        padding: 16px;
+    
+        tr {
+             border-bottom: 1px solid rgba(0, 0, 0, .35);
+             cursor: pointer;
+             &:last-child  {
+                border-bottom: 0px;
+            }
+            &:first-child {
+                cursor: unset;
+                &:hover {
+                    background-color: unset;
+                }
+            }
+            &:hover {
+                background-color: rgba(0, 0, 0, .35);
+            }
+            td {
+                height: 48px; 
+             }
+        }
+    
+        th {
+            color: rgba(0, 0, 0, .35);
+            text-align: start;
+            padding: 0 0 16px 0;
+        }
+    }
+}

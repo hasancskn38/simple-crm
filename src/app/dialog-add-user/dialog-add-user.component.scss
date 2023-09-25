@@ -1,0 +1,25 @@
+.container {
+    padding: 16px;
+}
+
+.mr-16 {
+    margin-right: 16px;
+}
+
+.popup-container {
+    padding: 16px;
+}
+
+.progress-container {
+    position:relative; 
+    
+    mat-progress-bar {
+        position: absolute;
+    }
+}
+
+.buttons-container {
+    width: 100%;
+    display: flex !important;
+    justify-content: space-around !important;
+}
